@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #A8DADC;
+            --secondary-color: #1D3557;
+            --text-color: #333;
+            --background-color: #F1FAEE;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        .menu-bar {
+            display: block;
+            cursor: pointer;
+            font-size: 24px;
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: var(--secondary-color);
+            padding-top: 60px;
+            transition: 0.3s;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar.show {
+            right: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .sidebar ul li {
+            padding: 15px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+        }
+        .hero {
+            background: var(--primary-color);
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .contact ul li {
+            display: inline-block;
+        }
+        .contact ul li a {
+            text-decoration: none;
+            color: white;
+            background: var(--secondary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .contact ul li a:hover {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar" onclick="toggleSidebar()">☰</div>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#about" onclick="toggleSidebar()">About Me</a></li>
+            <li><a href="#agriculture" onclick="toggleSidebar()">Why Agriculture?</a></li>
+            <li><a href="#education" onclick="toggleSidebar()">Education</a></li>
+            <li><a href="#projects" onclick="toggleSidebar()">Projects & Achievements</a></li>
+            <li><a href="#extra" onclick="toggleSidebar()">Extracurricular Activities</a></li>
+            <li><a href="#contact" onclick="toggleSidebar()">Reach Out</a></li>
+        </ul>
+    </div>
+    
+    <div class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>A showcase of my journey, projects, and achievements</p>
+    </div>
+    
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I am Nikhil Kumar, a dedicated agriculture student at Lovely Professional University, passionate about sustainable farming, modern agricultural technologies, and eco-friendly practices to enhance food security and revolutionize the farming sector.
+        </p>
+        <img src="1732369842700-Photoroom.png" alt="About Me">
+    </section>
+    
+    <section id="agriculture">
+        <h1>Why Agriculture?</h1>
+        <p>Agriculture is more than just farming; it’s about nurturing life. I chose this path because I love the connection between people, food, and nature. Growing something that feeds others is deeply fulfilling, and I want to contribute to a future where farming is more sustainable, efficient, and rewarding for everyone.</p>
+        <img src="https://imgs.search.brave.com/SYmtRTg19-yZTgfrDKu2CPzDssxTzkKDqnzhnDk1BVw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzBiL2Zh/L2EwLzBiZmFhMGQ4/YzZjNGE5ZTc4MWMy/NWViNDZiOWUwZDc5/LmpwZw" alt="Why Agriculture">
+    </section>
+    
+    <section id="education">
+        <h1>Education</h1>
+        <p><strong>B.Sc. (Hons.) Agriculture</strong> - Lovely Professional University</p>
+        <p><strong>Intermediate</strong> - Modern Public School</p>
+        <p><strong>Secondary School</strong> - Modern Public School</p>
+        <img src="https://imgs.search.brave.com/9tjPiH3I-6ogwgg86cicDfqCjYGT-azka4QA8tGR8vU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dW5pdmVyc2l0eWth/cnQuY29tLy9Db250/ZW50L3VwbG9hZC9h/ZG1pbi9icWVha2xr/cC51bmsuanBn" alt="Education">
+    </section>
+    
+    <section id="projects">
+        <h1>Projects & Achievements</h1>
+        <p>Working on Vertical Farming & Multilayer farming  Project </p>
+
+            <p>Mushroom Cultivation </p>
+            
+            <p>Participated in  SSAFNS Conducted by LPU.</p>
+        <img src="IMG_20250319_212859.jpg" alt="Projects & Achievements">
+    </section>
+    
+    <section id="extra">
+        <h1>Extracurricular Activities</h1>
+        
+        <p>My Journey with LPU NSS: Serving and Preserving Nature</p>
+        <img src="IMG_20250319_212355.jpg" alt="Extracurricular Activities">
+    </section>
+    
+    <section id="contact" class="contact">
+        <h1>Reach Out</h1>
+        <p>Connect with me on:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/bhumihar_nikhil_45/?next=%2F">Instagram</a></li>
+            <li><a href="https://x.com/NikhilBhum77381">Twitter</a></li>
+            <li><a href="https://facebook.com/nikhil.s.satya">Facebook</a></li>
+        </ul>
+    </section>
+    
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('show');
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
